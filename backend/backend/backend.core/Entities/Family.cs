@@ -12,4 +12,6 @@ public class Family
     public string FilePath { get; set; } = null!;
     public DateTime UploadDate { get; set; }
     public DateTime LastUpdate { get; set; }
+    
+    public List<FamilyFile> Attachments { get; set; } = new();
 }

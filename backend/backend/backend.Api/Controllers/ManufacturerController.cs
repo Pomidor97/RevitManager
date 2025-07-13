@@ -29,20 +29,20 @@ public class ManufacturerController : ControllerBase
     public async Task<IActionResult> Create([FromBody] CreateManufacturerDto dto)
     {
         await _service.CreateAsync(dto);
-        return Ok();
+        return Ok(new { message = "Manufacturer created." });
     }
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdateManufacturerDto dto)
     {
         await _service.UpdateAsync(id, dto);
-        return Ok();
+        return Ok(new { message = "Manufacturer Updated." });
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
         await _service.DeleteAsync(id);
-        return Ok();
+        return Ok(new { message = "Manufacturer deleted." });
     }
 }

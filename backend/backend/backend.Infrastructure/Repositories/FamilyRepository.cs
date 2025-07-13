@@ -22,12 +22,16 @@ public class FamilyRepository : IFamilyRepository
 
     public async Task<List<Family>> GetAllAsync()
     {
-        return await _context.Families.ToListAsync();
+        return await _context.Families
+            .Include(f => f.Attachments)
+            .ToListAsync();
     }
 
     public async Task<Family?> GetByIdAsync(Guid id)
     {
-        return await _context.Families.FindAsync(id);
+        return await _context.Families
+            .Include(f => f.Attachments)
+            .FirstOrDefaultAsync(f => f.Id == id);
     }
 
     public async Task UpdateAsync(Family family)
@@ -38,7 +42,10 @@ public class FamilyRepository : IFamilyRepository
 
     public async Task DeleteAsync(Guid id)
     {
-        var family = await _context.Families.FindAsync(id);
+        var family = await _context.Families
+            .Include(f => f.Attachments)
+            .FirstOrDefaultAsync(f => f.Id == id);
+
         if (family is not null)
         {
             _context.Families.Remove(family);

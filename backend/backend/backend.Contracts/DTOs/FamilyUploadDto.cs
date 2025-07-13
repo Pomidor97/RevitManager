@@ -11,5 +11,7 @@ public class FamilyUploadDto
     public Guid ManufacturerId { get; set; }
     public string? Description { get; set; }
     public IFormFile File { get; set; } = null!;
+    
+    public List<IFormFile>? Attachments { get; set; }
 
 }

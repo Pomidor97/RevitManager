@@ -29,20 +29,20 @@ public class RevitVersionController : ControllerBase
     public async Task<IActionResult> Create([FromBody] CreateRevitVersionDto dto)
     {
         await _service.CreateAsync(dto);
-        return Ok();
+        return Ok(new { message = "Version created." });
     }
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdateRevitVersionDto dto)
     {
         await _service.UpdateAsync(id, dto);
-        return Ok();
+        return Ok(new { message = "Version updated." });
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
         await _service.DeleteAsync(id);
-        return Ok();
+        return Ok(new { message = "Version deleted." });
     }
 }

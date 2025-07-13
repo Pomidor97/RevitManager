@@ -29,20 +29,20 @@ public class SectionController : ControllerBase
     public async Task<IActionResult> Create([FromBody] CreateSectionDto dto)
     {
         await _service.CreateAsync(dto);
-        return Ok();
+        return Ok(new { message = "Section created." });
     }
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdateSectionDto dto)
     {
         await _service.UpdateAsync(id, dto);
-        return Ok();
+        return Ok(new { message = "Section updated." });
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
         await _service.DeleteAsync(id);
-        return Ok();
+        return Ok(new { message = "Section deleted." });
     }
 }

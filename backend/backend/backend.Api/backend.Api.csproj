@@ -22,4 +22,8 @@
       <ProjectReference Include="..\backend.Infrastructure\backend.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="stroage\" />
+    </ItemGroup>
+
 </Project>
