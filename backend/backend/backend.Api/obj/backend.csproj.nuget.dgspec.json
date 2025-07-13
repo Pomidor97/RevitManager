@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Zhassulan\\03_Исходные коды плагинов\\RevitManager\\backend\\backend\\backend\\backend.csproj": {}
+    "D:\\Zhassulan\\03_Source codes\\RevitManager\\backend\\backend\\backend\\backend.csproj": {}
   },
   "projects": {
-    "D:\\Zhassulan\\03_Исходные коды плагинов\\RevitManager\\backend\\backend\\backend\\backend.csproj": {
+    "D:\\Zhassulan\\03_Source codes\\RevitManager\\backend\\backend\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Zhassulan\\03_Исходные коды плагинов\\RevitManager\\backend\\backend\\backend\\backend.csproj",
+        "projectUniqueName": "D:\\Zhassulan\\03_Source codes\\RevitManager\\backend\\backend\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\Zhassulan\\03_Исходные коды плагинов\\RevitManager\\backend\\backend\\backend\\backend.csproj",
+        "projectPath": "D:\\Zhassulan\\03_Source codes\\RevitManager\\backend\\backend\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\zhassulan.suleiman\\.nuget\\packages\\",
-        "outputPath": "D:\\Zhassulan\\03_Исходные коды плагинов\\RevitManager\\backend\\backend\\backend\\obj\\",
+        "outputPath": "D:\\Zhassulan\\03_Source codes\\RevitManager\\backend\\backend\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
