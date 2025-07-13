@@ -1,0 +1,26 @@
+﻿# ========== BACKEND (.NET) ==========
+/backend/bin/
+/backend/obj/
+*.user
+*.suo
+*.sln.docstates
+/backend/appsettings.*.json
+/backend/secrets.json
+
+# ========== FRONTEND (Vue) ==========
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env
+/frontend/.env.*.local
+
+# ========== COMMON ==========
+.vscode/
+.idea/
+*.log
+logs/
+dump/
+.DS_Store
+Thumbs.db
+
+# ========== STORAGE ==========
+/backend/storage/
