@@ -3,7 +3,7 @@ using backend.core.Interfaces;
 using backend.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace backend.Infrastructure.Repositories;
+namespace backend.infrastructure.Repositories;
 
 public class FamilyRepository : IFamilyRepository
 {
@@ -13,7 +13,7 @@ public class FamilyRepository : IFamilyRepository
     {
         _context = context;
     }
-    
+
     public async Task AddAsync(Family family)
     {
         _context.Families.Add(family);
@@ -23,5 +23,26 @@ public class FamilyRepository : IFamilyRepository
     public async Task<List<Family>> GetAllAsync()
     {
         return await _context.Families.ToListAsync();
+    }
+
+    public async Task<Family?> GetByIdAsync(Guid id)
+    {
+        return await _context.Families.FindAsync(id);
+    }
+
+    public async Task UpdateAsync(Family family)
+    {
+        _context.Families.Update(family);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(Guid id)
+    {
+        var family = await _context.Families.FindAsync(id);
+        if (family is not null)
+        {
+            _context.Families.Remove(family);
+            await _context.SaveChangesAsync();
+        }
     }
 }

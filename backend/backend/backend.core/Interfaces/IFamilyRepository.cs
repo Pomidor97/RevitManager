@@ -6,4 +6,7 @@ public interface IFamilyRepository
 {
     Task AddAsync(Family family);
     Task<List<Family>> GetAllAsync();
+    Task<Family?> GetByIdAsync(Guid id);
+    Task UpdateAsync(Family family);
+    Task DeleteAsync(Guid id);
 }
