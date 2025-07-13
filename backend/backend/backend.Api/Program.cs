@@ -22,6 +22,9 @@ builder.Services.AddScoped<ISectionRepository, SectionRepository>();
 builder.Services.AddScoped<ISectionService, SectionService>();
 builder.Services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
 builder.Services.AddScoped<IManufacturerService, ManufacturerService>();
+builder.Services.AddScoped<IRevitVersionRepository, RevitVersionRepository>();
+builder.Services.AddScoped<IRevitVersionService, RevitVersionService>();
+
 
 
 
